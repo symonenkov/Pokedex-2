@@ -1,0 +1,50 @@
+﻿<div class="col-md-4 col-sm-4 col-sm-offset-8 col-md-offset-8  fixed" id="selected-pokemon">
+    <div ng-controller="PokemonListCtrl as vm">
+        <div class="poke-info-wrap">
+            <img src="http://pokeapi.co/media/img/{{vm.national_id}}.png" id="poke-info-image">
+            <h4>{{vm.pokemon}}</h4>
+            <div id="table">
+                <table class="table table-bordered table-sm">
+                    <tbody>
+                        <tr>
+                            <td>Type</td>
+                            <!--<td><span class="table-types">fire </span></td>-->
+                        </tr>
+                        <tr>
+                            <td>Attack</td>
+                            <td>{{vm.Attack}}</td>
+                        </tr>
+                        <tr>
+                            <td>Defense</td>
+                            <td>58</td>
+                        </tr>
+                        <tr>
+                            <td>HP</td>
+                            <td>58</td>
+                        </tr>
+                        <tr>
+                            <td>SP Attack</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>SP Defense</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>Speed</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Weight</td>
+                            <td>190</td>
+                        </tr>
+                        <tr>
+                            <td>Total moves</td>
+                            <td>80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

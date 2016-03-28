@@ -1,0 +1,67 @@
+﻿<div ng-controller="PokemonListCtrl as vm">
+    <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+        <div class="row " id="pokemons-container">
+                <div class="col-lg-4 col-md-4 col-xs-6 col-sm-6" ng-repeat="pokemon in vm.pokemons">
+                    <div class="margin-wrap" ng-click="vm.PokeInfo($event)" data-id="{{pokemon.national_id}}">
+                        <img src="http://pokeapi.co/media/img/{{pokemon.national_id}}.png" id="poke-image">
+                        <h4>{{ pokemon.name }}</h4>
+                        <div class='types'>
+                            <span ng-repeat="type in pokemon.types" class="label label-primary pokemon-type" id="{{type.name}}">{{type.name}}</span>
+                        </div>
+                    </div>
+                </div>
+                <button ng-click="vm.myFunction()" type="button" class="btn btn-primary btn-block" id="load-more">Load More </button>
+        </div>
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-sm-offset-8 col-md-offset-8  fixed" id="selected-pokemon">
+            <div class="poke-info-wrap">
+                <img src="http://pokeapi.co/media/img/{{vm.pokemon.national_id}}.png" id="poke-info-image">
+                <h4>{{vm.pokemon.name}}</h4>
+                <div id="table">
+                    <table class="table table-bordered table-sm">
+                        <tbody>
+                            <tr>
+                                <td>Type</td>
+                                <td>
+                                <span class="table-types" ng-repeat="type in vm.pokemon.types">{{type.name}}  </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Attack</td>
+                                <td>{{vm.pokemon.attack}}</td>
+                            </tr>
+                            <tr>
+                                <td>Defense</td>
+                                <td>{{vm.pokemon.defense}}</td>
+                            </tr>
+                            <tr>
+                                <td>HP</td>
+                                <td>{{vm.pokemon.hp}}</td>
+                            </tr>
+                            <tr>
+                                <td>SP Attack</td>
+                                <td>{{vm.pokemon.sp_atk}}</td>
+                            </tr>
+                            <tr>
+                                <td>SP Defense</td>
+                                <td>{{vm.pokemon.sp_def}}</td>
+                            </tr>
+                            <tr>
+                                <td>Speed</td>
+                                <td>{{vm.pokemon.speed}}</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>{{vm.pokemon.weight}}</td>
+                            </tr>
+                            <tr>
+                                <td>Total moves</td>
+                                <td>{{vm.pokemon.moves.length}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
